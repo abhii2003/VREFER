@@ -1,0 +1,13 @@
+@import "@/styles/abstract/mixin";
+@import "@/styles/abstract/variable";
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text&display=swap");
+
+.about {
+  @include section;
+  // transform: translate(0);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 15% 85%;
+  justify-items: center;
+  column-gap: 1em;
+}

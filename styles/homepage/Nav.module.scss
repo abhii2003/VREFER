@@ -1,0 +1,120 @@
+@import '@/styles/abstract/mixin';
+@import '@/styles/abstract/variable';
+
+.header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background: $primary-color;
+}
+
+.logo {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.navToggle {
+    position: absolute;
+    height: 2.4em;
+    width: 2.4em;
+    z-index: 9999;
+    top: 0.9rem;
+    right: 2rem;
+    background: transparent;
+    border: hidden;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navToggle {
+        display: block;
+    }
+
+    .nav>ul {
+        @include side-bar;
+        transform: translate(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav[data-visible="true"]>ul {
+        @include side-bar;
+        transform: translate(0%);
+
+    }
+
+
+}
+
+.navToggle[data-visible='true']>.cross {
+    display: block;
+    height: 2em;
+    width: 2em;
+
+}
+
+.navToggle[data-visible='false']>.hamburger {
+    display: block;
+}
+
+.navToggle[data-visible='false']>.cross {
+    display: none;
+}
+
+.navToggle[data-visible='true']>.hamburger {
+    display: none;
+}
+
+.searchbar {
+    @include mix_input_box;
+    visibility: hidden;
+}
+
+.nav {
+    padding-right: min(8%, 4rem);
+}
+
+.nav>ul {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    inset: 2.5em 0 0 30%;
+    gap: 2em;
+}
+
+.nav>ul>li {
+    list-style: none;
+
+}
+
+.nav>ul>li>a {
+    @include nav-font;
+
+}
+
+
+//navigation bar hover effect 
+.nav>ul>li>a:link,
+.nav>ul>li>a:visited {
+    color: $secondary-color;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav>ul>li>a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $secondary-color;
+    bottom: -4px;
+    left: 0;
+    transform: scale(0);
+    transition: 0.2s all ease-out;
+}
+
+.nav>ul>li>a:hover::after {
+    transform: scale(1);
+
+}

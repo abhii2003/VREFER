@@ -1,0 +1,50 @@
+@mixin section {
+    height: max(700px, 100vh);
+}
+
+@mixin nav-font {
+    text-decoration: none;
+    font-family: $text-font;
+    font-weight: 600;
+    user-select: none;
+    color: $secondary-color;
+}
+
+@mixin side-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 999;
+    height: 100%;
+    inset: 2.5em 0 0 30%;
+    background-color: $primary-color;
+}
+
+@mixin mix_span_heading {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    color: $secondary-color;
+}
+
+@mixin mix_input_box {
+    padding: 0.3em;
+    border-radius: 5px;
+    margin: 0;
+    width: 250px;
+    font-family: $text-font;
+}
+
+
+
+@mixin mix_green_button {
+    height: 2.7em;
+    width: 7em;
+    border-radius: 5px;
+    border-style: none;
+    border-color: $secondary-color;
+    background-color: $secondary-color;
+    font-family: $text-font;
+    font-weight: 600;
+}
