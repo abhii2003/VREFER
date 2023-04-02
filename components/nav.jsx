@@ -4,16 +4,20 @@ import Link from 'next/link';
 import styles from '@/styles/homepage/Nav.module.scss';
 import logo from '@/components/images/logo.png';
 import navtoggle from '@/components/navtoggle.js';
-
+import dino from '@/components/images/dino.gif';
 const Nav = () => {
     return (
         <>
 
             <header className={styles.header}>
-                <div className={styles.logo}>
+                <div className={styles.logo} >
                     <a href="/" replace >
-                        <Image className={styles.image2} src={logo} width={128} height={50} />
+                        {/* <h1 classname>vrefer</h1> */}
+                        <Image src={logo} width={128} height={50} />
                     </a>
+                </div>
+                <div className={styles.dino}>
+                    <Image className={styles.image3} src={dino} height={50} />
                 </div>
                 <button className={styles.navToggle} id='NavToggle' data-visible="false">
                     <svg className={styles.cross} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" >
@@ -28,13 +32,19 @@ const Nav = () => {
                     <ul className={styles.nav}>
                         <input className={styles.searchbar} placeholder='   &#x1F50E;&#xFE0E; Search for courses'></input>
                         <li>
-                            <a href="/#about" replace >About</a>
+                            <a href="/#about" replace onClick={() => { document.getElementById("PrimaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle").setAttribute("data-visible", "false"); }} >
+                                About
+                            </a>
                         </li>
                         <li>
-                            <a href="/#courses" replace>Courses</a>
+                            <a href="/#courses" replace onClick={() => { document.getElementById("PrimaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle").setAttribute("data-visible", "false"); }}>
+                                Courses
+                            </a>
                         </li>
                         <li>
-                            <a href="/#contact" replace>Contact</a>
+                            <a href="/#contact" replace onClick={() => { document.getElementById("PrimaryNav").setAttribute("data-visible", "false"); document.getElementById("NavToggle").setAttribute("data-visible", "false"); }}>
+                                Contact
+                            </a>
                         </li>
 
                     </ul>

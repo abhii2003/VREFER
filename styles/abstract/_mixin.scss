@@ -1,5 +1,31 @@
 @mixin section {
     height: max(700px, 100vh);
+    display: flex;
+    justify-content: center
+}
+
+@mixin sectionWrapper {
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 70%;
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 70%;
+    }
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 70%;
+
+    }
 }
 
 @mixin nav-font {
@@ -17,15 +43,16 @@
     justify-content: start;
     z-index: 999;
     height: 100%;
-    inset: 2.5em 0 0 30%;
+    inset: 2.69em 0 0 30%;
     background-color: $primary-color;
+    opacity: 0.98;
 }
 
-@mixin mix_span_heading {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-    color: $secondary-color;
+@mixin heading {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 4.8em;
+    font-weight: 500;
+    color: $primary-color;
 }
 
 @mixin mix_input_box {

@@ -1,5 +1,6 @@
 import '@/styles/globals.scss';
 import Nav from '@/components/nav';
+import Footer from '@/components/footer';
 
 
 export default function App({ Component, pageProps }) {
@@ -8,6 +9,7 @@ export default function App({ Component, pageProps }) {
     <>
       <Nav />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }

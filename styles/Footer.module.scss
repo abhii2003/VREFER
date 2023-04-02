@@ -1,0 +1,24 @@
+@import '@/styles/abstract/mixin';
+@import '@/styles/abstract/variable';
+
+
+
+.footer {
+    height: fit-content;
+    background-color: $secondary-color;
+
+}
+
+.container {
+    max-width: 1170px;
+    background-color: transparent;
+    margin: auto;
+}
+
+
+.copyright {
+    color: gray;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}

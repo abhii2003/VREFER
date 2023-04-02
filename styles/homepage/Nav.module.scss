@@ -6,12 +6,19 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    background: $primary-color;
+    opacity: 0.98;
+    background: #ffffff;
 }
 
 .logo {
     margin-top: 5px;
     margin-left: 20px;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+.dino {
+    margin-top: 5px;
 }
 
 .navToggle {
@@ -27,7 +34,7 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .navToggle {
         display: block;
     }
@@ -35,15 +42,15 @@
     .nav>ul {
         @include side-bar;
         transform: translate(100%);
-        transition: transform 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
+
     }
 
     .nav[data-visible="true"]>ul {
         @include side-bar;
         transform: translate(0%);
-
+        box-shadow: -5px 13px 12px 0px $secondary-color;
     }
-
 
 }
 
@@ -79,7 +86,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    inset: 2.5em 0 0 30%;
+    inset: 2.69em 0 0 30%;
     gap: 2em;
 }
 
@@ -92,7 +99,6 @@
     @include nav-font;
 
 }
-
 
 //navigation bar hover effect 
 .nav>ul>li>a:link,
