@@ -5,6 +5,7 @@
 
 .home {
     @include section;
+    z-index: 1;
 
 }
 
@@ -13,11 +14,16 @@
     height: 105vh;
 }
 
+.particles {
+    z-index: 0;
+}
+
 
 .homeTitle {
     @include heading;
     grid-column: 1/ span 4;
     grid-row: 15/ span 39;
+    z-index: 5;
 }
 
 .lamprod {

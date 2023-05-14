@@ -5,6 +5,7 @@ import styles from '@/styles/homepage/Nav.module.scss';
 import logo from '@/components/images/logo.png';
 import navtoggle from '@/components/navtoggle.js';
 import dino from '@/components/images/dino.gif';
+
 const Nav = () => {
     return (
         <>

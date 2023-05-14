@@ -7,6 +7,10 @@ import Contact from './contact';
 import Course from './courses';
 import light from '@/components/images/light.png';
 
+
+
+
+
 function HomePage() {
 
     return (
@@ -17,6 +21,8 @@ function HomePage() {
                 <meta name="description" content="Conference on Linear Algebra" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+
+
             <section data-scroll-section className={styles.home}>
                 <div className={styles.sectionWrapper}>
                     <div className={styles.lamprod}></div>
@@ -29,10 +35,14 @@ function HomePage() {
                         ---Unleash Your Academic Potential with vrefer: Your Comprehensive Study Resource
                     </p>
                 </div>
+
             </section>
+
             <About />
             <Course />
             <Contact />
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 
         </>
 

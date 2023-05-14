@@ -5,9 +5,64 @@
   height: max(350px, 50vh);
   display: flex;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: $fourth-color;
+
+  @media (max-height:920px) {
+    height: max(310px, 35vh);
+  }
+
 }
 
 .sectionWrapper {
   @include sectionWrapper;
+}
+
+@media (max-width: 600px) {
+  .touchytext {
+    font-size: 2.2em;
+    grid-row: 2 /span 25;
+    grid-column: 1/span 4;
+  }
+
+  .copyright_message {
+    grid-row: 12/ span 11;
+    grid-column: 1 / span 4;
+    font-size: 0.62em;
+  }
+
+
+}
+
+@media (min-width: 600px) {
+  .touchytext {
+    font-size: 3em;
+    grid-row: 2 /span 25;
+    grid-column: 1/span 6;
+  }
+
+  .copyright_message {
+    grid-row: 15;
+    grid-column: 1 / span 8;
+    font-size: 1.2em;
+
+    @media (max-height:760px) {
+      font-size: 0.8em;
+    }
+
+  }
+}
+
+@media (min-width: 952px) {
+  .touchytext {
+    font-size: 3em;
+    grid-row: 2 /span 17;
+    grid-column: 1/span 6;
+  }
+
+  .copyright_message {
+    grid-row: 16/ span 20;
+    grid-column: 2 / span 11;
+    font-size: 0.9em;
+
+  }
 }

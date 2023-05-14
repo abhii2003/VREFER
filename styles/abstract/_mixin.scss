@@ -1,5 +1,6 @@
 @mixin section {
     height: max(700px, 100vh);
+
     display: flex;
     justify-content: center
 }
@@ -27,6 +28,32 @@
 
     }
 }
+
+@mixin sectionTitle {
+    @media (max-width: 600px) {
+        grid-column: 1/span 4;
+        grid-row: 8/span 22;
+        text-align: center;
+        font-size: 1.7em;
+    }
+
+    @media (min-width: 600px) {
+        grid-column: 2/span 6;
+        grid-row: 8/span 22;
+        text-align: center;
+        font-size: 1.7em;
+    }
+
+    @media (min-width: 992px) {
+        grid-column: 4/span 6;
+        grid-row: 5/span 17;
+        text-align: center;
+        font-size: 2em;
+        z-index: 1;
+
+    }
+}
+
 
 @mixin nav-font {
     text-decoration: none;
@@ -65,13 +92,15 @@
 
 
 
-@mixin mix_green_button {
-    height: 2.7em;
-    width: 7em;
+@mixin mix_black_button {
+    height: 3em;
+    width: 9.1em;
     border-radius: 5px;
     border-style: none;
-    border-color: $secondary-color;
-    background-color: $secondary-color;
     font-family: $text-font;
-    font-weight: 600;
+    font-weight: 500;
+    border-color: black;
+    background-color: black;
+    color: $primary-color;
+    cursor: pointer;
 }

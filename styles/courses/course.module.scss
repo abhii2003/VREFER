@@ -4,9 +4,79 @@
 
 .course {
     @include section;
-    background-color: #c2d0e2;
+    background-color: #ffffff;
+}
+
+.headingCourses {
+    @include sectionTitle;
+
 }
 
 .sectionWrapper {
     @include sectionWrapper;
+}
+
+.course_btn {
+    @include mix_black_button;
+    grid-row: 76;
+
+    @media(max-width:600px) {
+        grid-column: 2/span 3;
+
+        @media(min-height:900px) {
+            grid-row: 100;
+        }
+    }
+
+    @media(min-width:600px) {
+        grid-column: 6/span 8;
+
+        @media(min-height:900px) {
+            grid-row: 110;
+        }
+    }
+
+    @media(min-width:992px) {
+        grid-column: 10/span 2;
+    }
+}
+
+.card_gallery_wrap {
+    margin-top: 2em;
+    grid-row: 5;
+    grid-column: 1/ span 12;
+
+    @media (min-height:910px) {
+        grid-row: 25;
+    }
+}
+
+
+.card_carousel {
+    overflow-x: scroll;
+    display: flex;
+    gap: 5em;
+    padding-bottom: 2em;
+
+
+}
+
+.headingCourses span {
+    background-color: #c2d0e2;
+}
+
+
+.card_carousel::-webkit-scrollbar {
+    cursor: pointer;
+}
+
+
+
+.card_carousel::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.card_carousel::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
 }
