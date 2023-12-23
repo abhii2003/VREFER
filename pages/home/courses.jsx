@@ -4,7 +4,7 @@ import Cards from '@/components/cards';
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap";
 import { useDraggable } from "react-use-draggable-scroll";
-
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -120,7 +120,7 @@ function Course() {
                             ))}
                         </div>
                     </div>
-                    <button className={styles.course_btn}>All Courses &gt;</button>
+                    <Link href="/all-courses" className={styles.course_btn_wrapper}><button className={styles.course_btn}>All Courses &gt;</button></Link >
                 </div>
             </section>
         </>

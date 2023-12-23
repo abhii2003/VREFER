@@ -1,6 +1,5 @@
 @mixin section {
     height: max(700px, 100vh);
-
     display: flex;
     justify-content: center
 }
@@ -32,21 +31,21 @@
 @mixin sectionTitle {
     @media (max-width: 600px) {
         grid-column: 1/span 4;
-        grid-row: 8/span 22;
+        grid-row: 8/span 20;
         text-align: center;
         font-size: 1.7em;
     }
 
     @media (min-width: 600px) {
         grid-column: 2/span 6;
-        grid-row: 8/span 22;
+        grid-row: 8/span 20;
         text-align: center;
         font-size: 1.7em;
     }
 
     @media (min-width: 992px) {
         grid-column: 4/span 6;
-        grid-row: 5/span 17;
+        grid-row: 5/span 15;
         text-align: center;
         font-size: 2em;
         z-index: 1;

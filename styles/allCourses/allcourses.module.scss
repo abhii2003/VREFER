@@ -1,0 +1,59 @@
+@import '@/styles/abstract/mixin';
+@import '@/styles/abstract/variable';
+@import url('https://fonts.googleapis.com/css2?family=Manrope&family=Source+Code+Pro:ital,wght@0,500;1,400&display=swap');
+
+
+.All_courses {
+    @include section;
+    z-index: 1;
+    background-color: rgb(228, 228, 228);
+    height: fit-content;
+}
+
+
+.sectionWrapper {
+    // height: fit-content;
+
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 85%;
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 85%;
+    }
+
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(200, 8px);
+        width: 85%;
+    }
+
+}
+
+.allTitle {
+    @include sectionTitle;
+    margin-top: 1.5em;
+}
+
+.allCards {
+    grid-row: 25/span 60;
+    grid-column: 1/span 120;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.search {
+    grid-column: 4/span 6;
+    grid-row: 18/span 6;
+    text-align: center;
+    font-size: 2em;
+    z-index: 1;
+}

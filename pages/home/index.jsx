@@ -6,7 +6,7 @@ import About from './about';
 import Contact from './contact';
 import Course from './courses';
 import light from '@/components/images/light.png';
-
+// import SearchBar from '@/components/searchBar';
 
 
 
@@ -41,8 +41,6 @@ function HomePage() {
             <About />
             <Course />
             <Contact />
-
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.3/particles.min.js"></script>
 
         </>
 

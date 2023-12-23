@@ -5,12 +5,7 @@ import gsap from 'gsap';
 
 gsap.registerPlugin(ScrollTrigger);
 function Cards(
-    {
-        name,
-        details,
-        // updateActiveSpeaker,
-        // index
-    }
+    { id, description }
 ) {
 
     const cardRef = useRef(null);
@@ -46,14 +41,18 @@ function Cards(
     }, [])
     return (
         <>
-            <div ref={cardRef} className={styles.card_wrapper}>
-                <div className={styles.card}>
 
-                    <button className={styles.button}>
-                        Download material
-                    </button>
-                </div>
+
+            <div className={`${id} ${styles.card}`} >
+
+                <p>{description}</p>
+                <button className={styles.button2}>
+                    Download material
+                </button>
+
+                {/* Other card content */}
             </div>
+
 
         </>
     )
